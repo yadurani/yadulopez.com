@@ -1,0 +1,16 @@
+{
+  "short_name": "Yadu López",
+  "name": "Yadurani López | Frontend Developer & Web Designer",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#7200E7",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ]
+}

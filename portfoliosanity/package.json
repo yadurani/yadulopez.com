@@ -1,0 +1,30 @@
+{
+  "name": "portfoliosanity",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "Yadurani López <yadu-lopez@hotmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "build": "sanity build"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^2.16.0",
+    "@sanity/components": "^2.14.0",
+    "@sanity/core": "^2.16.0",
+    "@sanity/default-layout": "^2.16.0",
+    "@sanity/default-login": "^2.16.0",
+    "@sanity/desk-tool": "^2.16.1",
+    "@sanity/image-url": "^0.140.22",
+    "@sanity/vision": "^2.15.0",
+    "prop-types": "^15.7",
+    "react": "^17.0",
+    "react-dom": "^17.0"
+  },
+  "devDependencies": {}
+}
