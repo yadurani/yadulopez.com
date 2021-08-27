@@ -2,8 +2,7 @@
 
 # dependencies
 node_modules/
-sanity.json
-sanityClient.js
+dist/
 /.pnp
 .pnp.js
 
