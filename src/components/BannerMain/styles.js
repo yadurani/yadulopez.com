@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components'
 
 export const ContainerBanner = styled.section`
   background: linear-gradient(180deg, ${({ theme }) => theme.palette.bgGradientMain} 0%, rgba(119, 0, 179, 0) 100%);
-  height: ${({ height }) => height + 'px' || '100vh'};
+  height: ${({ height }) => height ? height + 'px' : '100vh'};
   position: relative;
   text-align: center;
   display: flex;
@@ -51,7 +51,7 @@ export const TitleBanner = styled.h1`
   font-weight: 900;
   font-size: 7.56rem;
   line-height: 9.43rem;
-  @media(max-width: 960px) {
+  @media(max-width: 1000px) {
     font-size: 5.5rem;
     line-height: 6rem;
   }
@@ -61,11 +61,12 @@ export const TitleBanner = styled.h1`
   }
 `
 
-export const SubtitleBanner = styled.h2`
+export const SubtitleBanner = styled.p`
   font-size: 2.125rem;
   line-height: 2.563rem;
   font-weight: 500;
   font-family: ${({ theme }) => theme.fonts[1]}, sans-serif;
+  margin: 0;
   @media(max-width: 767px) {
     font-size: 1.3rem;
     line-height: 2rem;
@@ -80,7 +81,7 @@ const colorAnimation = keyframes`
   }
 `
 
-export const CaptionBanner = styled.h3`
+export const CaptionBanner = styled.h2`
   animation: ${colorAnimation} 5s linear alternate;
   animation-iteration-count: infinite;
   color: ${({ theme }) => theme.palette.secondary};
@@ -113,6 +114,9 @@ export const SocialBanner = styled.div`
 export const LinkExternalBanner = styled.a`
   padding: 0 0.5rem;
   transition: transform 0.3s ease;
+  span {
+    display: none;
+  }
   @media(hover: hover) {
     &:hover {
       transform: scale(0.9);

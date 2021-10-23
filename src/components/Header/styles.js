@@ -6,7 +6,7 @@ export const ContainerHeader = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 5;
   background: rgba(255,255,255,0.01);
   backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgb(0 0 0 / 10%);
@@ -50,6 +50,7 @@ export const NavItem = styled.li`
     background-color: ${({ theme }) => theme.palette.primary};
     position: absolute;
     bottom: -2px;
+    left: 0;
     transition: transform 0.3s ease;
     transform: scale(0);
   }

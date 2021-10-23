@@ -54,6 +54,7 @@ export const PrimaryButton = css`
     border-radius: 3rem;
     border-style: solid;
     border-width: 3px;
+    color: ${({ theme }) => theme.palette.textDark};
     display: inline-flex;
     font-family: ${({ theme }) => theme.fonts[0]};
     font-weight: 700;
@@ -82,11 +83,15 @@ export const PrimaryButton = css`
   }
   @media(hover: hover) {
     &:hover {
+      color: ${({ theme }) => theme.palette.textLight};
       border-color: ${({ theme }) => theme.palette.textLight};
       text-decoration: none;
       transition: border-color 0.3s ease;
       &::before {
         transform: scale3d(9, 9, 1);
+        @media(max-width: 960px) {
+          transform: scale3d(25, 9, 1);
+        }
       }
     }
   }
@@ -141,6 +146,9 @@ export const SecondaryButton = css`
       transition: color 0.3s ease;
       &::before {
         transform: scale3d(9, 9, 1);
+        @media(max-width: 960px) {
+          transform: scale3d(25, 9, 1);
+        }
       }
     }
   }

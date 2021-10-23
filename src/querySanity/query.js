@@ -8,7 +8,8 @@ const portfolioHomeQuery = groq`
     previewUrl,
     'images': images[]{
       _key,
-      'url': asset->url
+      'url': asset->url,
+      alt,
     },
     'stack': stack[]{ 
       name,

@@ -7,7 +7,7 @@ export const ContainerPortfolio = styled.section`
   position: relative;
   ${ImagePatterns} {
     position: absolute;
-    top: 25%;
+    top: 20%;
     right: 0;
     z-index: -1;
   }
@@ -19,13 +19,12 @@ export const ContainerPortfolio = styled.section`
 
 export const ContainerProject = styled.ul`
   display: grid;
-  grid-template-columns: repeat(3, calc(33.3% - 10px));
+  grid-template-columns: repeat(2, calc(50% - 0.5rem));
   grid-gap: 1rem;
   list-style: none;
   @media(max-width: 767px) {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 1rem;
-    padding: 1rem;
   }
 `
 
@@ -69,14 +68,18 @@ export const ProjectItem = styled.li`
   overflow: hidden;
   position: relative;
   transition: transform 0.3s ease;
+  box-sizing: border-box;
   width: 100%;
   ${Image} {
+    object-fit: contain;
     backface-visibility: hidden;
     background-color: transparent;
     box-shadow: none;
     box-sizing: border-box;
     padding: 1rem;
+    height: 100%;
     @media(max-width: 959px) {
+      height: auto;
       padding: 0 0 1rem;
     }
     transform: rotateY(0deg);

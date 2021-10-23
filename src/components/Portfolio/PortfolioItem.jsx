@@ -5,10 +5,10 @@ import { BtnSecondarySm, Image } from 'styles/CommonComponents'
 import { ProjectItem, ProjectItemText, ProjectTitle, ButtonContainer, StackList, StackItem, ImageIcon } from './styles'
 
 const PortfolioItem = ({ name, codeUrl, previewUrl, images, stack }) => {
-  const { url: urlImage } = images[0]
+  const { url: urlImage, alt } = images[0]
   return (
     <ProjectItem>
-      <Image src={urlImage} alt={name}/>
+      <Image src={urlImage} alt={alt} width="560" height="319"/>
       <ProjectItemText>
         <ProjectTitle>
           {name}
@@ -22,12 +22,16 @@ const PortfolioItem = ({ name, codeUrl, previewUrl, images, stack }) => {
           ))}
         </StackList>
         <ButtonContainer>
-          <BtnSecondarySm href={previewUrl} target="_blank">
-            Demo <MdOpenInNew/>
-          </BtnSecondarySm>
-          <BtnSecondarySm href={codeUrl} target="_blank">
-            Código <MdOpenInNew/>
-          </BtnSecondarySm>
+          {previewUrl && 
+            <BtnSecondarySm href={previewUrl} target="_blank" rel="noopener">
+              Demo <MdOpenInNew/>
+            </BtnSecondarySm>
+          }
+          {codeUrl && 
+            <BtnSecondarySm href={codeUrl} target="_blank" rel="noopener">
+              Código <MdOpenInNew/>
+            </BtnSecondarySm>
+          }
         </ButtonContainer>
       </ProjectItemText>
     </ProjectItem>

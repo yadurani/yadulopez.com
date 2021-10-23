@@ -28,16 +28,19 @@ const Footer = () => (
         <SocialList>
           <li>
             <LinkExternal rel="noopener" href={Msg.Linkedin} target="_blank" title="Linkedin">
+              <span>Red social de Linkedin</span>
               <FaLinkedinIn size="1.2rem"/>
             </LinkExternal>
           </li>
           <li>
             <LinkExternal rel="noopener" href={Msg.Twitter} target="_blank">
+              <span>Red social de Twitter</span>
               <FaTwitter size="1.2rem"/>
             </LinkExternal>
           </li>
           <li>
             <LinkExternal rel="noopener" href={Msg.Github} target="_blank">
+              <span>Red social de Github</span>
               <FaGithub size="1.2rem"/>
             </LinkExternal>
           </li>
@@ -45,6 +48,7 @@ const Footer = () => (
       </ContainerCopy>
     </Container>
     <ImagePatterns 
+      alt="Patrón de cuadrados"
       src="/patterns-square.svg" 
       width="737" 
       height="237" 

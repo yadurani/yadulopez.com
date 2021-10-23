@@ -29,12 +29,15 @@ const BannerMain = () => {
         </CaptionBanner>
         <SocialBanner>
           <LinkExternalBanner rel="noopener" href={Msg.Linkedin} target="_blank">
+            <span>Red social de Linkedin</span>
             <FaLinkedinIn size="1.5rem"/>
           </LinkExternalBanner>
           <LinkExternalBanner rel="noopener" href={Msg.Twitter} target="_blank">
+            <span>Red social de Twitter</span>
             <FaTwitter size="1.5rem"/>
           </LinkExternalBanner>
           <LinkExternalBanner rel="noopener" href={Msg.Github} target="_blank">
+            <span>Red social de Github</span>
             <FaGithub size="1.5rem"/>
           </LinkExternalBanner>
         </SocialBanner>
@@ -51,7 +54,7 @@ const BannerMain = () => {
           height="237" 
           className="PatternSquare"/>
       </Container>
-      <ArrowButton onClick={handleScrollDown}>
+      <ArrowButton onClick={handleScrollDown} aria-label="Botón para bajar">
         <IoArrowDownCircleSharp size="4rem"/>
       </ArrowButton>
     </ContainerBanner>

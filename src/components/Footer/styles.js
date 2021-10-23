@@ -65,7 +65,11 @@ export const SocialList = styled.ul`
   }
 `
 
-export const LinkExternal = styled.a``
+export const LinkExternal = styled.a`
+  span {
+    display: none;
+  }
+`
 
 export const TextInfo = styled.div`
   font-size: ${({ theme }) => theme.size.sm};

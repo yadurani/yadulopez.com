@@ -18,11 +18,13 @@ const Portfolio = () => {
       <Container>
         <TitleSection secondary>Portafolio.</TitleSection>
       </Container>
-      <ContainerProject>
-        {portfolioHome?.map(({ _id, ...rest}) => (
-          <PortfolioItem key={_id} {...rest}/>
-        ))}
-      </ContainerProject>
+      <Container>
+        <ContainerProject>
+          {portfolioHome?.map(({ _id, ...rest}) => (
+            <PortfolioItem key={_id} {...rest}/>
+            ))}
+        </ContainerProject>
+      </Container>
     </ContainerPortfolio>
   )
 }

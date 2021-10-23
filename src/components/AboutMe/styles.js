@@ -2,7 +2,7 @@ import styled, { css, keyframes } from 'styled-components'
 import { Container } from 'styles/CommonComponents'
 
 export const ContainerAbout = styled.section`
-  margin: 130px 0;
+  margin: 130px 0 100px;
   padding: 70px 0;
   ${Container} {
     display: grid;
@@ -58,12 +58,9 @@ export const PhotoMeBg = styled.div`
 `
 
 export const PhotoImg = styled.img`
+  height: auto;
+  object-fit: contain;
   width: 100%;
-    height: auto;
-  @media(max-width: 767px) {
-    width: 100%;
-    height: auto;
-  }
 `
 
 export const TabList = styled.ul`
@@ -88,6 +85,11 @@ export const TabItem = styled.li`
   color: ${({ isActive, theme }) => isActive ? theme.palette.primary : 'inherit'};
   pointer-events: ${({ isActive }) => isActive && 'none' };
   position: relative;
+  @media(hover: hover) {
+    &:hover {
+      color: ${({ theme }) => theme.palette.primary};
+    }
+  }
   ${({ isActive }) => isActive && css`
     &::before {
       content: '';
@@ -145,6 +147,9 @@ export const ButtonContainer = styled.div`
   gap: ${({ theme }) => theme.size.md};
   margin-top: 2rem;
   @media(max-width: 767px) {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-gap:  ${({ theme }) => theme.size.md};
     flex-direction: column;
   }
 `

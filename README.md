@@ -11,7 +11,7 @@ Mi sitio web personal.
 ![Img overview project](public/page-gif.gif)
 
 ## Acerca del proyecto
-Este es mi sitio web personal donde podrás encontrar información sobre mi perfil profesional, mi experiencia y habilidades, además de los proyectos en los que he trabajado.
+This is my personal website where you can find information about my professional profile, my experience and skills, as well as the projects I have worked on.
 ## Tecnologías 🔧
 
 - React
