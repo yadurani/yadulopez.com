@@ -12,8 +12,8 @@ import Msg from 'constants/messages'
 import { ButtonContainer, CompanyName, ContainerAbout, Link, PhotoImg, PhotoMeBg, PhotoMeContainer, SkillsItem, SkillsList, StudiesItem, StudiesList, TabList, TabPanelItem } from './styles'
 
 const AboutMe = () => {
-  const { aboutMe } = useContext(ContextApp)
-  const { stack, studies } = aboutMe
+  const { aboutMe = {} } = useContext(ContextApp)
+  const { stack = [], studies = [] } = aboutMe
 
   return (
     <ContainerAbout id="SobreMi">

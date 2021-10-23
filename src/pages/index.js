@@ -26,14 +26,20 @@ const Home = () => {
 }
 
 export const getStaticProps = async () => {
-  const { portfolioHome, aboutMe, projects } = await sanityClient.fetch(queryGlobal)
-  return {
-    props: {
-      portfolioHome,
-      aboutMe,
-      projects
-    },
-    revalidate: 5 * 60
+  try {
+    const { portfolioHome, aboutMe, projects } = await sanityClient.fetch(queryGlobal)
+    return {
+      props: {
+        portfolioHome,
+        aboutMe,
+        projects
+      },
+      revalidate: 5 * 60
+    }
+  } catch {
+    return {
+      props: {},
+    }
   }
 }
 
