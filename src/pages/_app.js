@@ -1,5 +1,4 @@
 import { ThemeProvider } from 'styled-components'
-
 import Theme from 'constants/uiTheme'
 import GlobalStyle from 'styles/GlobalStyles'
 import App from 'context/ContextApp'
