@@ -1,7 +1,6 @@
 # yadulopez.com
 
-Mi sitio web personal.
-
+My personal website.
 ## Demo 🚀
 
 [View Demo](https://yadulopez.com/)
@@ -10,7 +9,7 @@ Mi sitio web personal.
 
 ![Img overview project](public/page-gif.gif)
 
-## Acerca del proyecto
+## About Project
 This is my personal website where you can find information about my professional profile, my experience and skills, as well as the projects I have worked on.
 ## Tecnologías 🔧
 
@@ -19,6 +18,23 @@ This is my personal website where you can find information about my professional
 - Styled Components
 - Sanity
 - Vercel
+
+## Installation 👁‍🗨
+Clone project 
+```
+  git clone https://github.com/yadurani/yadulopez.com.git
+```
+
+Install dependencies
+```
+  yarn install or npm install
+```
+
+Run proyect in development
+```
+  yarn dev or npm run dev
+```
+
 ## Contact 📧
 
 - Linkedin [YaduLopez](https://www.linkedin.com/in/yadu-lopez/)
