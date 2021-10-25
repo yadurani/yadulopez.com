@@ -1,7 +1,15 @@
 {
-  "name": "landing-yadu",
+  "name": "yadulopezcom",
   "version": "0.1.0",
   "private": true,
+  "description": "💙Front-End Developer specialized in React JS. Creation, prototyping and development of innovative user-centered digital products. Passionate about design and entrepreneurship. 🚀",
+  "main": "src/pages/_app.js",
+  "author": {
+    "name" : "Yadurani López Rivera", 
+    "email" : "yadulopez21@gmail.com", 
+    "url" : "https://yadulopez.com/"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
