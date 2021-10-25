@@ -1,12 +1,15 @@
 import React, { useContext } from 'react'
 
-import { Container, ImagePatterns, TitleSection } from 'styles/CommonComponents'
-import { ContextApp } from 'context/ContextApp'
-import { ContainerPortfolio, ContainerProject } from './styles'
 import PortfolioItem from './PortfolioItem'
+
+import { ContextApp } from 'context/ContextApp'
+
+import { ContainerPortfolio, ContainerProject } from './styles'
+import { Container, ImagePatterns, TitleSection } from 'styles/CommonComponents'
 
 const Portfolio = () => {
   const { portfolioHome } = useContext(ContextApp)
+
   return (
     <ContainerPortfolio id="Portafolio">
        <ImagePatterns 

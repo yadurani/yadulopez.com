@@ -5,9 +5,12 @@ import AboutMe from 'components/AboutMe'
 import BannerMain from 'components/BannerMain'
 import Footer from 'components/Footer'
 import Portfolio from 'components/Portfolio'
-import { ContainerGradient } from 'styles/CommonComponents'
+
 import GenerateTitlePageSEO from 'helpers/seoPerPage'
+
 import DataSeo from 'constants/dataSeo'
+
+import { ContainerGradient } from 'styles/CommonComponents'
 
 const Home = () => {
   return (

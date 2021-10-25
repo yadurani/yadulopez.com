@@ -4,11 +4,11 @@ import { MdEmail, MdCloudDownload } from 'react-icons/md'
 import TabBar from './AboutContext'
 import Tab from './Tab'
 import TabPanel from './TabPanel'
-import { BtnPrimaryLinkMd, BtnSecondaryMd, Container, Image, ImagePatterns, TitleSection } from 'styles/CommonComponents'
 
 import { ContextApp } from 'context/ContextApp'
 import Msg from 'constants/messages'
 
+import { BtnPrimaryLinkMd, BtnSecondaryMd, Container, Image, ImagePatterns, TitleSection } from 'styles/CommonComponents'
 import { ButtonContainer, CompanyName, ContainerAbout, Link, PhotoImg, PhotoMeBg, PhotoMeContainer, SkillsItem, SkillsList, StudiesItem, StudiesList, TabList, TabPanelItem } from './styles'
 
 const AboutMe = () => {
@@ -26,7 +26,11 @@ const AboutMe = () => {
               alt="Patrón de puntos" 
               width="151" 
               height="321"/>
-            <PhotoImg src="/photo-me.png" alt="Yadurani López" width="400" height="536"/>
+            <PhotoImg 
+              src="/photo-me.png" 
+              alt="Yadurani López" 
+              width="400" 
+              height="536"/>
             <ImagePatterns 
               className="PatternWave" 
               src="/patterns-wave-photo.svg" 
@@ -71,9 +75,22 @@ const AboutMe = () => {
                     <StudiesList>
                       {studies?.map(({ _key, name, icon, company, urlPreview }) => (
                         <StudiesItem key={_key}>
-                          {icon && <Image alt={name} src={icon} height="20" width="20"/>}
-                          <p>{urlPreview && <Link href={urlPreview} target="_blank" rel="noreferrer">{name}</Link>}
-                          {!urlPreview && name}<CompanyName>&nbsp;-&nbsp;{company}</CompanyName></p>
+                          {icon && 
+                            <Image 
+                              alt={name} 
+                              src={icon} 
+                              height="20" 
+                              width="20"/>
+                          }
+                          <p>
+                            {urlPreview && 
+                              <Link href={urlPreview} target="_blank" rel="noreferrer">
+                                {name}
+                              </Link>
+                            }
+                            {!urlPreview && name}
+                            <CompanyName>&nbsp;-&nbsp;{company}</CompanyName>
+                          </p>
                         </StudiesItem>
                       ))}
                     </StudiesList>
@@ -86,7 +103,9 @@ const AboutMe = () => {
                     <SkillsList>
                       {stack?.map(({ _key, name, icon }) => (
                         <SkillsItem key={_key}>
-                          {icon && <Image alt={name} src={icon} height="20"/>}
+                          {icon && 
+                            <Image alt={name} src={icon} height="20"/>
+                          }
                           {name}
                         </SkillsItem>
                       ))}

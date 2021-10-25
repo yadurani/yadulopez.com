@@ -2,10 +2,12 @@ import React from 'react'
 import { MdOpenInNew } from 'react-icons/md'
 
 import { BtnSecondarySm, Image } from 'styles/CommonComponents'
+
 import { ProjectItem, ProjectItemText, ProjectTitle, ButtonContainer, StackList, StackItem, ImageIcon } from './styles'
 
 const PortfolioItem = ({ name, codeUrl, previewUrl, images, stack }) => {
   const { url: urlImage, alt } = images[0]
+  
   return (
     <ProjectItem>
       <Image src={urlImage} alt={alt} width="560" height="319"/>

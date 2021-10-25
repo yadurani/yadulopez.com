@@ -7,15 +7,16 @@ const useCurrentLink = () => {
     let current;
 
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
+      const sectionTop = section.offsetTop
       if (pageYOffset >= sectionTop - 60) {
-        current = section.getAttribute("id"); }
+        current = section.getAttribute("id")
+      }
     })
 
     navLi.forEach((li) => {
-      li.classList.remove("active");
+      li.classList.remove("active")
       if (li.classList.contains(current)) {
-        li.classList.add("active");
+        li.classList.add("active")
       }
     })
   }

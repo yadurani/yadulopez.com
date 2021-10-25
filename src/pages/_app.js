@@ -1,8 +1,12 @@
 import { ThemeProvider } from 'styled-components'
-import Theme from 'constants/uiTheme'
-import GlobalStyle from 'styles/GlobalStyles'
-import App from 'context/ContextApp'
+
 import Layout from 'components/Layout'
+
+import Theme from 'constants/uiTheme'
+
+import App from 'context/ContextApp'
+
+import GlobalStyle from 'styles/GlobalStyles'
 
 const MyApp = ({ Component, pageProps }) => {
   return (

@@ -14,7 +14,6 @@ class MyDocument extends Document {
           />
           <link rel="icon" type="image/png" href="icon-64.png" sizes="64x64"/>
           <link rel="manifest" href="manifest.json"/>
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -42,7 +41,6 @@ class MyDocument extends Document {
 }
 
 MyDocument.getInitialProps = async (ctx) => {
-  // Step 1: Create an instance of ServerStyleSheet
   const sheet = new ServerStyleSheet()
   const originalRenderPage = ctx.renderPage
 

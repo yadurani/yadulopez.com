@@ -1,11 +1,13 @@
 import React from 'react'
+import Link from 'next/link'
 import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 
+import scrollTop from 'helpers/scrollTop'
+
 import Msg from 'constants/messages'
+
 import { Container, ImageLogo, ImagePatterns } from 'styles/CommonComponents'
 import { ContainerCopy, ContainerFooter, ContainerInfo, LinkExternal, SocialList, TextInfo } from './styles'
-import Link from 'next/link'
-import scrollTop from 'helpers/scrollTop'
 
 const Footer = () => (
   <ContainerFooter>

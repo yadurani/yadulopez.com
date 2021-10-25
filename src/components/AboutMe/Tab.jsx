@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 
 import { TabBarContext } from './AboutContext'
+
 import { TabItem } from './styles'
 
 const Tab = ({ tabTitle, children }) => {

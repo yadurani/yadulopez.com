@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { MdEmail } from 'react-icons/md'
 
-import { Container, ImageLogo, BtnPrimaryLinkSm } from 'styles/CommonComponents'
-
 import scrollTop from 'helpers/scrollTop'
 
-import { ContainerHeader, MenuButton, Nav, NavItem, NavList, Overlay } from './styles'
 import useToggle from 'hooks/useToggle'
 import useCurrentLink from 'hooks/useCurrentLink'
+
+import { ContainerHeader, MenuButton, Nav, NavItem, NavList, Overlay } from './styles'
+import { Container, ImageLogo, BtnPrimaryLinkSm } from 'styles/CommonComponents'
 
 const Header = () => {
   const { open, handleOpen, handleClose } = useToggle()
@@ -21,7 +21,11 @@ const Header = () => {
         <div>
           <Link href="/" >
             <a onClick={scrollTop}>
-              <ImageLogo src="/logo.svg" width="100" height="40" alt="Logo"/>
+              <ImageLogo 
+                src="/logo.svg" 
+                width="100" 
+                height="40" 
+                alt="Logo"/>
             </a>
           </Link>
         </div>
@@ -37,7 +41,9 @@ const Header = () => {
               </MenuButton>
             </NavItem>
             <NavItem>
-              <u><b>MENÚ</b></u>
+              <u>
+                <b>MENÚ</b>
+              </u>
             </NavItem>
             <NavItem onClick={handleClose} className="SobreMi">
               <Link href="#SobreMi" >Sobre mi</Link>
@@ -46,7 +52,9 @@ const Header = () => {
               <Link href="#Portafolio">Portafolio</Link>
             </NavItem>
             <NavItem>
-              <BtnPrimaryLinkSm href="mailto:yadulopez21@gmail.com">Escríbeme <MdEmail/></BtnPrimaryLinkSm>
+              <BtnPrimaryLinkSm href="mailto:yadulopez21@gmail.com">
+                Escríbeme <MdEmail/>
+              </BtnPrimaryLinkSm>
             </NavItem>
           </NavList>
         </Nav>

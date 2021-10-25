@@ -3,13 +3,13 @@ import { FaLinkedinIn, FaTwitter, FaGithub } from 'react-icons/fa'
 import { IoArrowDownCircleSharp } from 'react-icons/io5'
 import Typed from 'react-typed'
 
-import { Container, ImagePatterns } from 'styles/CommonComponents'
-
-import { CaptionBanner, ContainerBanner, SubtitleBanner, TitleBanner,  SocialBanner, LinkExternalBanner, ArrowButton } from './styles'
 import Msg from 'constants/messages'
 
-import useScrollInto from 'hooks/useScrollInto';
+import useScrollInto from 'hooks/useScrollInto'
 import useWindowSize from 'hooks/useWindowSize'
+
+import { CaptionBanner, ContainerBanner, SubtitleBanner, TitleBanner,  SocialBanner, LinkExternalBanner, ArrowButton } from './styles'
+import { Container, ImagePatterns } from 'styles/CommonComponents'
 
 const BannerMain = () => {
   const handleScrollDown = useScrollInto(Msg.About)
