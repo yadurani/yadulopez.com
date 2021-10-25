@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { MdOpenInNew } from 'react-icons/md'
 
 import { BtnSecondarySm, Image } from 'styles/CommonComponents'
@@ -38,6 +39,31 @@ const PortfolioItem = ({ name, codeUrl, previewUrl, images, stack }) => {
       </ProjectItemText>
     </ProjectItem>
   )
+}
+
+PortfolioItem.propTypes = {
+  name: PropTypes.string.isRequired, 
+  codeUrl: PropTypes.string, 
+  previewUrl: PropTypes.string, 
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      _key: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+      alt: PropTypes.string
+    })
+  ).isRequired,
+  stack: PropTypes.arrayOf(
+    PropTypes.shape({
+      _key: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      icon: PropTypes.string
+    })
+  ).isRequired
+}
+
+PortfolioItem.defaultProps = {
+  codeUrl: null, 
+  previewUrl: null, 
 }
 
 export default PortfolioItem

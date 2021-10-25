@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react'
+import PropTypes from 'prop-types'
 
 export const TabBarContext = createContext()
 
@@ -11,6 +12,11 @@ const TabBar = ({ tab, children }) =>  {
       {children}
     </TabBarContext.Provider>
   )
+}
+
+TabBar.propTypes = {
+  tab: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default TabBar

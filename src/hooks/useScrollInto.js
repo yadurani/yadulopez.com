@@ -1,4 +1,6 @@
-const useScrollInto = (sectionId) => {
+import PropTypes from 'prop-types'
+
+const useScrollInto = ( sectionId ) => {
   const handleScroll = () => {
     const getId = document.getElementById(sectionId)
     if (typeof window !== 'undefined') {
@@ -11,6 +13,10 @@ const useScrollInto = (sectionId) => {
   }
 
   return handleScroll
+}
+
+useScrollInto.propTypes = {
+  sectionId: PropTypes.string.isRequired
 }
 
 export default useScrollInto

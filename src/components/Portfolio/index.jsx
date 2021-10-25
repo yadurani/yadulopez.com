@@ -24,7 +24,7 @@ const Portfolio = () => {
       <Container>
         <ContainerProject>
           {portfolioHome?.map(({ _id, ...rest}) => (
-            <PortfolioItem key={_id} {...rest}/>
+            <PortfolioItem key={_id} {...rest} />
             ))}
         </ContainerProject>
       </Container>

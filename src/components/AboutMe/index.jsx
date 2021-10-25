@@ -104,7 +104,7 @@ const AboutMe = () => {
                       {stack?.map(({ _key, name, icon }) => (
                         <SkillsItem key={_key}>
                           {icon && 
-                            <Image alt={name} src={icon} height="20"/>
+                            <Image alt={name} src={icon} height="20" />
                           }
                           {name}
                         </SkillsItem>

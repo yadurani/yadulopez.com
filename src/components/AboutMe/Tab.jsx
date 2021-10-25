@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 
 import { TabBarContext } from './AboutContext'
 
@@ -15,6 +16,11 @@ const Tab = ({ tabTitle, children }) => {
       {children}
     </TabItem>
   )
+}
+
+Tab.propTypes = {
+  tabTitle: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default Tab
